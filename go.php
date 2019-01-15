@@ -1,12 +1,15 @@
 <?php
 include 'connection.php';
-//database
+//database MYSQL
     //insert
-    function insert($json){
+    function insertJson($json){
 
     }
     //get table view
-    function getTable($conn,$sql,$headings){
+    function getTable($conn,$sql,$headings = null,$admin = false){
+        if (null === $headings) {
+            $headings = "HEADINGS NOT PROVIDED";
+        }
         $res = mysqli_query($conn,$sql);
         if($res){
             $noOfCols = mysqli_num_fields($res);
@@ -15,7 +18,14 @@ include 'connection.php';
                 echo "<table><tr>";
                 $hs = explode(',',$headings);
                 foreach ($hs as $key => $value) {
-                    echo "<th>".$value."</th>";
+                    if(Count($hs) == 1 AND true === $admin){
+                        $x = $noOfCols + 2;
+                        echo "<th colspan='$x'>$value</th>";
+                    }elseif(Count($hs) == 1 AND true !== $admin){
+                        echo "<th colspan='".$noOfCols."'>$value</th>";
+                    }else{
+                        echo "<th>$value</th>";
+                    }
                 }
                 echo "</tr>";
                 for($a = 0;$a < $noOfRows;$a++){
@@ -24,6 +34,9 @@ include 'connection.php';
                         echo '<tr>';
                         for($b = 0;$b < $noOfCols;$b++){
                             echo '<td>'.$row[$b].'</td>';
+                        }
+                        if(true === $admin){
+                            echo "<td row-id='{$row[0]}' class='update'>UPDATE</td><td row-id='{$row[0]}' class='delete'>DELETE</td>";
                         }
                         echo '</tr>';
                     }
@@ -36,7 +49,7 @@ include 'connection.php';
             echo mysqli_error($conn);
         }
     }
-    //run query
+    //del, edit, add, and run query
     function run($conn,$sql){
         if(mysqli_query($conn,$sql)){
             return true;
@@ -44,11 +57,11 @@ include 'connection.php';
             return mysqli_error($conn);
         }
     }
-    //edit
-    //update
-    //del
-//date and time
 
+    //date and time
+
+// EXAMPLES
+getTable($conn,"SELECT * FROM test",null,true);
 
 //
 
