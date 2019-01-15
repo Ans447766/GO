@@ -1,2 +1,2 @@
 # GO
-php framework with all basic lemp and lamp functions
+php framework with all basic lemp and lamp functions including exceptions.
