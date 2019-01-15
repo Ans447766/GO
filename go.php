@@ -8,25 +8,30 @@ include 'connection.php';
     //get table view
     function getTable($conn,$sql,$headings){
         $res = mysqli_query($conn,$sql);
-        $row = mysqli_fetch_assoc($res);
-        $noOfCols = ;
-        $noOfRows = $res -> num_rows;
-        if($row > 0){
-            echo "<table><tr>";
-            $hs = explode(',',$headings);
-            foreach ($hs as $key => $value) {
-                echo "<th>".$key."</th>";
-            }
-            echo "</tr>";
-            for($a = 0;$a < $noOfRows;$a++){
-                //each row here
-                echo '<tr>';
-                for($b = 0;$b < $noOfCols;$b++){
-                    echo '<td>'.$row[].'</td>';
+        if($res){
+            $noOfCols = mysqli_num_fields($res);
+            $noOfRows = mysqli_num_rows($res);
+            if($noOfRows > 0){
+                echo "<table><tr>";
+                $hs = explode(',',$headings);
+                foreach ($hs as $key => $value) {
+                    echo "<th>".$value."</th>";
                 }
-                echo '</tr>';
+                echo "</tr>";
+                for($a = 0;$a < $noOfRows;$a++){
+                    //each row here
+                    while($row = mysqli_fetch_array($res)){
+                        echo '<tr>';
+                        for($b = 0;$b < $noOfCols;$b++){
+                            echo '<td>'.$row[$b].'</td>';
+                        }
+                        echo '</tr>';
+                    }
+                }
+                echo "</table>";
+            }else{
+                echo "0 results";
             }
-            echo "</table>";
         }else{
             echo mysqli_error($conn);
         }
