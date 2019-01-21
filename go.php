@@ -27,7 +27,7 @@
     </head>
 <?php
 // include 'connection.php';
-$conn = mysqli_connect('localhost','root','','forTest');
+$conn = mysqli_connect('localhost','root','','frTest');if(!$conn){die();}
 //database MYSQL
 //del, edit, add, and run query
 function run($conn,$sql){
@@ -121,17 +121,20 @@ function getList($conn,$sql,$tagging = 'b'){
                 }
             }
             switch ($tagging) {
-                case 'b':
-                $tag = 'br';
-                break;
-                case 'o':
+                case 'l'://means list
                 $tag = 'li';
                 break;
-                case 'u':
-                $tag = 'li';
+                case 's'://means span
+                $tag = 'span';
                 break;
-                case 'd':
+                case 'dv'://means div
+                $tag = 'div';
+                break;
+                case 'dt'://means datalist
                 $tag = 'option';
+                break;
+                default:
+                $tag = 'div';
                 break;
             }
             viewList($res[1],$tag);
@@ -145,13 +148,13 @@ function getList($conn,$sql,$tagging = 'b'){
 
 
 // EXAMPLES
-// echo "<h1>GET TABLE</h1>";
-// getTable($conn,"SELECT * FROM test",null,true);//pass
-// echo "<h1>GET LIST</h1>";
-// getList($conn,"SELECT id,`name` FROM test",'o');//pass 
+echo "<h1>GET TABLE</h1>";
+getTable($conn,"SELECT * FROM test",null,false);//pass
+echo "<h1>GET LIST</h1>";
+getList($conn,"SELECT id,`name` FROM test",'dv');//pass 
 // run() //pass
 // getResult() //pass
-//
+echo '<h1></h1>';
 
 
 
