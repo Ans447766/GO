@@ -7,6 +7,8 @@
     #load{
         background-color:blue;
         height:100%;
+        width:0%;
+        font-size:40px;
         text-align:center;
         overflow:hidden;
         transition:1s;
@@ -37,12 +39,15 @@ for($i = 1;$i < 1000;$i++){
         $ij = $i/10;
         echo "<script>document.getElementById('load').style.width = '$ij%'</script>";
     }else{
-        echo mysqli_error($conn) . "<br>";
+        $m = mysqli_error($conn);
+        echo "<script>document.getElementById('load').style.backgroundColor = 'red'</script>";
+        echo "<script>document.getElementById('load').style.width = '100%'</script>";
+        echo '<script>document.getElementById(\'load\').innerHTML = "'.$m.'"</script>';
         die();
     }
     
 }
-echo "<script>document.getElementById('load').innerHTML = 'INSERTING COMPLETIED SUCCESSFULY'</script>";
+echo "<script>document.getElementById('load').innerHTML = 'INSERTION COMPLETIED SUCCESSFULY'</script>";
 ?>
 </body>
 </html>
