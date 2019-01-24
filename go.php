@@ -1,8 +1,9 @@
 <html>
     <head>
         <style>
-        html{
-            font-family:monaco;
+        body{
+            font-family:monospace;
+            font-size:20px;
         }
         .update{
             background-color:#c8e9ff;
@@ -27,7 +28,7 @@
     </head>
 <?php
 // include 'connection.php';
-$conn = mysqli_connect('localhost','root','','frTest');if(!$conn){die();}
+$conn = mysqli_connect('localhost','root','','forTest');if(!$conn){die();}
 //database MYSQL
 //del, edit, add, and run query
 function run($conn,$sql){
@@ -151,7 +152,7 @@ function getList($conn,$sql,$tagging = 'b'){
 echo "<h1>GET TABLE</h1>";
 getTable($conn,"SELECT * FROM test",null,false);//pass
 echo "<h1>GET LIST</h1>";
-getList($conn,"SELECT id,`name` FROM test",'dv');//pass 
+getList($conn,"SELECT id,`name` FROM test",'lii');//pass 
 // run() //pass
 // getResult() //pass
 echo '<h1></h1>';
