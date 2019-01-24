@@ -150,7 +150,7 @@ function getList($conn,$sql,$tagging = 'b'){
 
 // EXAMPLES
 echo "<h1>GET TABLE</h1>";
-getTable($conn,"SELECT * FROM test",null,false);//pass
+getTable($conn,"SELECT * FROM test","ID,NAME,DESCRIPTION,CLASS,PHN,EMAIL,ADDRESS",false);//pass
 echo "<h1>GET LIST</h1>";
 getList($conn,"SELECT id,`name` FROM test",'l');//pass 
 // run() //pass
