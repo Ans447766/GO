@@ -47,7 +47,7 @@ for($i = 1;$i < 1000;$i++){
     }
     
 }
-echo "<script>document.getElementById('load').innerHTML = 'INSERTION COMPLETIED SUCCESSFULY'</script>";
+echo "<script>document.getElementById('load').innerHTML = 'INSERTION COMPLETED SUCCESSFULLY'</script>";
 ?>
 </body>
 </html>
