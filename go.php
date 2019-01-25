@@ -128,9 +128,6 @@ function getList($conn,$sql,$tagging = 'b'){
                 case 's'://means span
                 $tag = 'span';
                 break;
-                case 'dv'://means div
-                $tag = 'div';
-                break;
                 case 'dt'://means datalist
                 $tag = 'option';
                 break;
@@ -152,7 +149,7 @@ function getList($conn,$sql,$tagging = 'b'){
 echo "<h1>GET TABLE</h1>";
 getTable($conn,"SELECT * FROM test","ID,NAME,DESCRIPTION,CLASS,PHN,EMAIL,ADDRESS",false);//pass
 echo "<h1>GET LIST</h1>";
-getList($conn,"SELECT id,`name` FROM test",'l');//pass 
+getList($conn,"SELECT id,`name` FROM test",'');//pass 
 // run() //pass
 // getResult() //pass
 echo '<h1></h1>';
