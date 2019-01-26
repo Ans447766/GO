@@ -28,11 +28,7 @@
     </head>
 <?php
 // include 'connection.php';
-<<<<<<< HEAD
 $conn = mysqli_connect('localhost','root','','forTest');if(!$conn){die();}
-=======
-$conn = mysqli_connect('localhost','root','','frTest');if(!$conn){die();}
->>>>>>> abb3ae26b32cf2bc26cc3841dec4e41dc9924812
 //database MYSQL
 //del, edit, add, and run query
 function run($conn,$sql){
@@ -132,12 +128,6 @@ function getList($conn,$sql,$tagging = 'b'){
                 case 's'://means span
                 $tag = 'span';
                 break;
-<<<<<<< HEAD
-=======
-                case 'dv'://means div
-                $tag = 'div';
-                break;
->>>>>>> abb3ae26b32cf2bc26cc3841dec4e41dc9924812
                 case 'dt'://means datalist
                 $tag = 'option';
                 break;
@@ -157,15 +147,9 @@ function getList($conn,$sql,$tagging = 'b'){
 
 // EXAMPLES
 echo "<h1>GET TABLE</h1>";
-<<<<<<< HEAD
 getTable($conn,"SELECT * FROM test","ID,NAME,DESCRIPTION,CLASS,PHN,EMAIL,ADDRESS",false);//pass
 echo "<h1>GET LIST</h1>";
 getList($conn,"SELECT id,`name` FROM test",'');//pass 
-=======
-getTable($conn,"SELECT * FROM test",null,false);//pass
-echo "<h1>GET LIST</h1>";
-getList($conn,"SELECT id,`name` FROM test",'dv');//pass 
->>>>>>> abb3ae26b32cf2bc26cc3841dec4e41dc9924812
 // run() //pass
 // getResult() //pass
 echo '<h1></h1>';
