@@ -11,10 +11,8 @@
 </head>
 <body>
     <ul>
-        <li><a target='_blank' href='#'>Create database</a></li>
         <li><a target='_blank' href='insert fake.php'>insert fake records</a></li>
         <li><a target='_blank' href='go.php'>GO preview</a></li>
-        <li><a target='_blank' href=''></a></li>
     </ul>
 </body>
 </html>

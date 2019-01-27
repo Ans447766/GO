@@ -21,6 +21,26 @@
         font-family:monospace;
         display:inline-block;
     }
+    #load2{
+        background-color:red;
+        height:100%;
+        width:100%;
+        font-size:40px;
+        text-align:center;
+        overflow:hidden;
+        transition:1s;
+        color:white;
+        position:fixed;
+        top:0px;
+        left:0px;
+        padding-top:25%;
+        font-weight:bold;
+        font-family:monospace;
+        display:inline-block;
+    }
+    a{
+        color:lightBlue;
+    }
     </style>
 </head>
 <body>
@@ -40,6 +60,7 @@ for($i = 1;$i < 1000;$i++){
         echo "<script>document.getElementById('load').style.width = '$ij%'</script>";
     }else{
         $m = mysqli_error($conn);
+        $m = $m . '<br><a href=\'createtable.php\'>create table</a>';
         echo "<script>document.getElementById('load').style.backgroundColor = 'red'</script>";
         echo "<script>document.getElementById('load').style.width = '100%'</script>";
         echo '<script>document.getElementById(\'load\').innerHTML = "'.$m.'"</script>';

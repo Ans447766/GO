@@ -144,17 +144,7 @@ function getList($conn,$sql,$tagging = 'b'){
     }
 }
 
-
-// EXAMPLES
-echo "<h1>GET TABLE</h1>";
-getTable($conn,"SELECT * FROM test","ID,NAME,DESCRIPTION,CLASS,PHN,EMAIL,ADDRESS",false);//pass
-echo "<h1>GET LIST</h1>";
-getList($conn,"SELECT id,`name` FROM test",'');//pass 
-// run() //pass
-// getResult() //pass
-echo '<h1></h1>';
-
-
-
+// VIEW PAGE LINKED BELOW .....
+include 'view.php';
 ?>
 </html>
