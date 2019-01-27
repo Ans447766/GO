@@ -1,0 +1,57 @@
+body{
+    font-family:monospace;
+    font-size:20px;
+}
+.update{
+    background-color:#c8e9ff;
+    color:black;
+    border-radius:4px;
+    padding:4px;
+}
+.delete{
+    background-color:red;
+    color:white;
+    border-radius:4px;
+    padding:4px;
+}
+table tr td{
+    border-collapse:collapse;
+    border:0px;
+}
+table tr:nth-child(even){
+    background-color:#fff;
+}
+#load{
+    background-color:blue;
+    height:100%;
+    width:0%;
+    font-size:40px;
+    text-align:center;
+    overflow:hidden;
+    transition:1s;
+    color:white;
+    position:fixed;
+    top:0px;
+    left:0px;
+    padding-top:25%;
+    font-weight:bold;
+    font-family:monospace;
+    display:inline-block;
+}
+#load2{
+    background-color:red;
+    height:100%;
+    width:100%;
+    font-size:40px;
+    text-align:center;
+    overflow:hidden;
+    transition:1s;
+    color:white;
+    position:fixed;
+    top:0px;
+    left:0px;
+    padding-top:25%;
+    font-weight:bold;
+    font-family:monospace;
+    display:inline-block;
+}

@@ -1,3 +1,4 @@
-FEATURES REQUESTS
+FEATURES REQUESTS AND TODOS
     1. class and id adder in loop of result functions
-    2.
+    2. adding unified style file
+    3. should contain databases array with exception handling and database installing feature
