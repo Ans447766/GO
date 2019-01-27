@@ -137,7 +137,7 @@ function getList($conn,$sql,$tagging = 'b'){
             }
             viewList($res[1],$tag);
         }else{
-            die('only select query allowed must not containe id individually');
+            die('only select query allowed must not contain id individually');
         }
     }else{
         echo $res[1];
