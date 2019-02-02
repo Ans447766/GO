@@ -51,13 +51,13 @@ if(!$conn){
     echo mysqli_error($conn);
     die();
 }
-for($i = 1;$i < 1000;$i++){
+for($i = 1;$i < 100;$i++){
     $sql = "INSERT INTO test (`name`,`descriptions`,`class`,`phn`,`email`,`address`) VALUES ('User$i','desc$i','1$i','$i$i$i$i$i$i','$i@$i.com','lahore home $i')";
     // echo $i."<br>";
     if(mysqli_query($conn,$sql)){
         // echo "inserted $i <br>";
-        $ij = $i/10;
-        echo "<script>document.getElementById('load').style.width = '$ij%'</script>";
+        // $ij = $i/10;
+        echo "<script>document.getElementById('load').style.width = '$i%'</script>";
     }else{
         $m = mysqli_error($conn);
         $m = $m . '<br><a href=\'createtable.php\'>create table</a>';
