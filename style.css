@@ -1,5 +1,5 @@
 body{
-    font-family:monospace;
+    font-family:monaco;
     font-size:20px;
 }
 .update{
@@ -13,14 +13,14 @@ body{
     color: white;
     border-radius:4px;
     padding:4px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .delete:hover{
     background-color: red;
     color: white;
     border-radius:4px;
     padding:4px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 .delete{
     border:1px solid red;
