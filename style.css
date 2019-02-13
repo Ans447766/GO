@@ -3,14 +3,28 @@ body{
     font-size:20px;
 }
 .update{
-    background-color:#c8e9ff;
-    color:black;
+    border:1px solid #0094f7;
+    color:#0094f7;
     border-radius:4px;
     padding:4px;
 }
+.update:hover{
+    background-color: #0094f7;
+    color: white;
+    border-radius:4px;
+    padding:4px;
+    transition: 0.5s;
+}
+.delete:hover{
+    background-color: red;
+    color: white;
+    border-radius:4px;
+    padding:4px;
+    transition: 0.5s;
+}
 .delete{
-    background-color:red;
-    color:white;
+    border:1px solid red;
+    color:red;
     border-radius:4px;
     padding:4px;
 }

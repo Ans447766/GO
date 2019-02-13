@@ -1,36 +1,6 @@
-<html>
-    <head>
-        <style>
-        body{
-            font-family:monospace;
-            font-size:20px;
-        }
-        .update{
-            background-color:#c8e9ff;
-            color:black;
-            border-radius:4px;
-            padding:4px;
-        }
-        .delete{
-            background-color:red;
-            color:white;
-            border-radius:4px;
-            padding:4px;
-        }
-        table tr td{
-            border-collapse:collapse;
-            border:0px;
-        }
-        table tr:nth-child(even){
-            background-color:#fff;
-        }
-        </style>
-    </head>
 <?php
-// include 'connection.php';
-$conn = mysqli_connect('localhost','root','','forTest');if(!$conn){die();}
-//database MYSQL
-//del, edit, add, and run query
+include 'ErrorHandler.php';
+include 'connection.php';
 function run($conn,$sql){
     if(mysqli_query($conn,$sql)){
         return true;
@@ -131,8 +101,11 @@ function getList($conn,$sql,$tagging = 'b'){
                 case 'dt'://means datalist
                 $tag = 'option';
                 break;
-                default:
+                case 'dv'://means datalist
                 $tag = 'div';
+                break;
+                default:
+                $tag = $tagging;
                 break;
             }
             viewList($res[1],$tag);
