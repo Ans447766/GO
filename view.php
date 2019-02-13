@@ -14,5 +14,4 @@ echo "</ol>";
 // run() //pass
 // getResult() //pass
 echo '<h1></h1>';
-
 ?>
