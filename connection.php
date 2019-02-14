@@ -1,6 +1,6 @@
 <?php
     $host = 'localhost';
-$username = 'rot';
+$username = 'root';
 $password = '';
 $database = 'forTest';
 $conn = mysqli_connect($host,$username,$password,$database);
