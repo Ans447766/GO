@@ -10,23 +10,23 @@ php framework with all basic lemp and lamp functions including exceptions.
 
 
 ## TASKS
-FEATURES REQUESTS AND TODOS
+### FEATURES REQUESTS AND TODOS
     . class and id adder in loop of result functions    SHOULD BE DONE USING CLASS OOP PHP
 
 
 
 
 
-FOR NEXT VERSION
+### FOR NEXT VERSION
     . should contain databases array with exception handling and database installing feature
 
 
 
     
-UNDER PROGRESS
+### UNDER PROGRESS
     
     
     
 
-COMPLETED
+### COMPLETED
     . adding unified style file seperated from go and view 
