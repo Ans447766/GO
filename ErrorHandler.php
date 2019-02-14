@@ -23,6 +23,6 @@ function shutdownHandler() {
         $error = "<b>SHUTDOWN</b> <br><br>lvl:" . $lasterror['type'] . " <br> msg:" . $lasterror['message'] . " <br> <b>file:" . $lasterror['file'] . "</b> | <b>ln:" . $lasterror['line'] ."</b>";
         echo "<div style='background-color:#d20000;color:white;position:fixed;top:0px;bottom:0px;left:0px;right:0px;width:100%;height:100%;font-family:monaco;padding:20px;'>".$error."</div>";
         die();
-    }
+    }else{ }
 }
 ?>
