@@ -18,8 +18,8 @@ function customError($errno, $errstr) {
     die();
 }
 function shutdownHandler() {
-    $lasterror = error_get_last() || 1;
-    if($lasterror != 1){
+    $lasterror = error_get_last();
+    if($lasterror){
         $error = "<b>SHUTDOWN</b> <br><br>lvl:" . $lasterror['type'] . " <br> msg:" . $lasterror['message'] . " <br> <b>file:" . $lasterror['file'] . "</b> | <b>ln:" . $lasterror['line'] ."</b>";
         echo "<div style='background-color:#d20000;color:white;position:fixed;top:0px;bottom:0px;left:0px;right:0px;width:100%;height:100%;font-family:monaco;padding:20px;'>".$error."</div>";
         die();
