@@ -1,4 +1,5 @@
 <?php
+//INCLUDE THIS FILE ALWAYS ON TOP
 // 2	    E_WARNING	             Non-fatal run-time errors. Execution of the script is not halted
 // 8	    E_NOTICE	             Run-time notices. The script found something that might be an error, but could also happen when running a script normally
 // 256    	E_USER_ERROR	         Fatal user-generated error. This is like an E_ERROR set by the programmer using the PHP function trigger_error()
