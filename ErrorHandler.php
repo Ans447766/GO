@@ -7,7 +7,7 @@
 // 1024    	E_USER_NOTICE	         User-generated notice. This is like an E_NOTICE set by the programmer using the PHP function trigger_error()
 // 4096    	E_RECOVERABLE_ERROR	     Catchable fatal error. This is like an E_ERROR but can be caught by a user defined handle (see also set_error_handler())
 // 8191    	E_ALL	                 All errors and warnings (E_STRICT became a part of E_ALL in PHP 5.4)
-//_______________________________________________________________________________________________________
+//_______________________________________________________________________________________________________________________________________________________________
 // Assigning error handling functions.
 set_error_handler("customError",E_ALL);
 register_shutdown_function("shutdownHandler");
