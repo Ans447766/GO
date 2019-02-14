@@ -18,7 +18,7 @@ php framework with all basic lemp and lamp functions including exceptions.
 
 
 ### FOR NEXT VERSION
-    . should contain databases array with exception handling and database installing feature
+    . should contain databases array with exception handling and 
 
 
 
@@ -30,3 +30,4 @@ php framework with all basic lemp and lamp functions including exceptions.
 
 ### COMPLETED
     . adding unified style file seperated from go and view 
+    . database installing feature
