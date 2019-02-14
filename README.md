@@ -18,7 +18,7 @@ php framework with all basic lemp and lamp functions including exceptions.
 
 
 ### FOR NEXT VERSION
-    . should contain databases array with exception handling and 
+    . should contain databases array with exception handling 
 
 
 
