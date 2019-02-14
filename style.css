@@ -3,32 +3,16 @@ body{
     font-size:20px;
 }
 .update{
-    border:1px solid #69a7d1;
-    color:#0094f7;
-    font-weight:bold;
-    border-radius:4px;
-    padding:4px;
-}
-.update:hover{
-    background-color: #0094f7;
-    color: white;
-    border-radius:4px;
-    padding:4px;
-    transition: 0.2s;
-}
-.delete:hover{
-    background-color: red;
-    color: white;
+    color: #0079ca;
     border-radius:4px;
     padding:4px;
     transition: 0.2s;
 }
 .delete{
-    border:1px solid rgb(218, 107, 107);
-    color:red;
-    font-weight:bold;
+    color: rgb(204, 0, 0);
     border-radius:4px;
     padding:4px;
+    transition: 0.2s;
 }
 table tr td{
     border-collapse:collapse;
