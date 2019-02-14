@@ -13,7 +13,7 @@ register_shutdown_function("shutdownHandler");
 set_error_handler("customError",E_ALL);
 // error handler functions
 function customError($errno, $errstr,$errfile,$errline) {
-    $error = "<b>Error:</b> [$errno] $errstr<br><b>$errfile</b> | <b>$errline</b>";
+    $error = "<b>Error:</b> [$errno]<br> $errstr<br><b>$errfile</b> | <b>$errline</b>";
     echo "<div style='background-color:purple;color:white;position:fixed;top:0px;bottom:0px;left:0px;right:0px;width:100%;height:100%;font-family:monaco;padding:20px;'>".$error."</div>";
     // header(location:crash.php?err=$error); //redirect user to crash page
     die();
