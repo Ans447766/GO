@@ -9,8 +9,8 @@
 // 8191    	E_ALL	                 All errors and warnings (E_STRICT became a part of E_ALL in PHP 5.4)
 //_______________________________________________________________________________________________________________________________________________________________
 // Assigning error handling functions.
-set_error_handler("customError",E_ALL);
 register_shutdown_function("shutdownHandler");
+set_error_handler("customError",E_ALL);
 // error handler functions
 function customError($errno, $errstr) {
     $error = "<b>Error:</b> [$errno] $errstr<br>";

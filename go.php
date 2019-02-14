@@ -5,7 +5,7 @@ function run($conn,$sql){
     if(mysqli_query($conn,$sql)){
         return true;
     }else{
-        return mysqli_error($conn);
+        trigger_error(mysqli_error($conn));
     }
 }
 //get result
@@ -13,7 +13,8 @@ function getResult($conn,$sql){
     if($r = mysqli_query($conn,$sql)){
         return array(true,$r);
     }else{
-        return array(false,mysqli_error($conn));
+        trigger_error(mysqli_error($conn));
+        die();
     }
 }
 //insert
@@ -60,8 +61,6 @@ function getTable($conn,$sql,$headings = null,$admin = false){
         }else{
             echo "0 results";
         }
-    }else{
-        echo mysqli_error($conn);
     }
 }
 //getList($conn,$sql,$tag) function if $tag = u:unorder list will print if o:ordered list will print if d:datalist will print if (default)b:line breaks will print.
