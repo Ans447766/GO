@@ -5,6 +5,6 @@ php framework with all basic lemp and lamp functions including exceptions.
 
 
 
-#Pre-Requisites
+## Pre-Requisites
 1. set track_errors = Off   in php.ini
 
