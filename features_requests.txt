@@ -5,7 +5,6 @@ FEATURES REQUESTS AND TODOS
 
 
 
-------------------------------------------------------------------------------------------------------------------
 FOR NEXT VERSION
     . should contain databases array with exception handling and database installing feature
 
