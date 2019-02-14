@@ -15,6 +15,7 @@ set_error_handler("customError",E_ALL);
 function customError($errno, $errstr,$errfile,$errline) {
     $error = "<b>Error:</b> [$errno] $errstr<br><b>$errfile</b> | <b>$errline</b>";
     echo "<div style='background-color:purple;color:white;position:fixed;top:0px;bottom:0px;left:0px;right:0px;width:100%;height:100%;font-family:monaco;padding:20px;'>".$error."</div>";
+    // header(location:crash.php?err=$error); //redirect user to crash page
     die();
 }
 function shutdownHandler() {
@@ -22,6 +23,7 @@ function shutdownHandler() {
     if($lasterror){
         $error = "<b>SHUTDOWN</b> <br><br>lvl:" . $lasterror['type'] . " <br> msg:" . $lasterror['message'] . " <br> <b>file:" . $lasterror['file'] . "</b> | <b>ln:" . $lasterror['line'] ."</b>";
         echo "<div style='background-color:#d20000;color:white;position:fixed;top:0px;bottom:0px;left:0px;right:0px;width:100%;height:100%;font-family:monaco;padding:20px;'>".$error."</div>";
+        // header(location:crash.php?err=$error); //redirect user to crash page
         die();
     }else{ }
 }
