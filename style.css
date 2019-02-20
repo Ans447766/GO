@@ -3,25 +3,57 @@ body{
     font-size:20px;
 }
 .update{
-    color: #0079ca;
-    border-radius:4px;
+    background-color: #d1edff;
+    color: #0099ff;
+    font-weight:bold;
     padding:4px;
-    text-decoration: underline;
-    transition: 0.2s;
+    padding:0px 10px;
+    opacity: 0;
 }
 .delete{
-    color: rgb(204, 0, 0);
-    border-radius:4px;
+    background-color: rgb(255, 228, 228);
+    color: rgb(255, 0, 0);
+    font-weight:bold;
     padding:4px;
-    text-decoration: underline;
+    padding:0px 10px;
+    opacity: 0;
+}
+.update:hover{
+    background-color: #0099ff;
+    color:white;
     transition: 0.2s;
 }
+.delete:hover{
+    background-color: rgb(255, 0, 0);
+    color:white;
+    transition: 0.2s;
+}
+table{
+    border-collapse: collapse;
+}
+table tr:hover{
+    background-color: rgb(235, 247, 255);
+    transition:0.1s;
+}
+table tr:hover .update{
+    opacity: 1;
+    transition:0.1s;
+}
+table tr:hover .delete{
+    opacity: 1;
+    transition:0.1s;
+}
+table tr th{
+    padding: 5px 0px 5px 30px;
+    text-align: left;
+    background-color: black;
+    color:white;
+}
 table tr td{
+    padding: 5px 0px 5px 30px;
+    text-align: left;
     border-collapse:collapse;
     border:0px;
-}
-table tr:nth-child(even){
-    background-color:#fff;
 }
 #load{
     background-color:blue;
